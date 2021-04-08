@@ -1,0 +1,14 @@
+{
+    id: String,
+    title: String
+    formats: [
+        {
+            height: int
+            width: int
+            acodec: String,
+            format_note: String
+            url: URL
+            ext: String
+        }
+    ]
+}

@@ -1,0 +1,16 @@
+{
+  "sharedDir": "shared",
+  "dependenciesDir": "extern",
+  "info": {
+    "name": "SongDataCore",
+    "id": "songdatacore",
+    "version": "0.1.0",
+    "url": "https://github.com/Fernthedev/songdatacore_rust",
+    "additionalData": {
+      "overrideSoName": "aarch64-linux-android-libyoutubedl_rust.so",
+      "soLink": "https://github.com/Fernthedev/songdatacore_rust/releases/download/0.1.0/aarch64-linux-android-libyoutubedl_rust.so"
+    }
+  },
+  "dependencies": [],
+  "additionalData": {}
+}

@@ -1,0 +1,57 @@
+# The language to output bindings in
+#
+# possible values: "C", "C++", "Cython"
+#
+# default: "C++"
+language = "C++"
+
+# Whether to add a `#pragma once` guard
+# default: doesn't emit a `#pragma once`
+pragma_once = true
+
+namespace = "youtubedl_rust"
+
+# Include doc comments from Rust as documentation
+documentation = true
+
+
+[parse]
+clean = true
+
+[parse.expand]
+# A list of crate names that should be run through `cargo expand` before
+# parsing to expand any macros. Note that if a crate is named here, it
+# will always be parsed, even if the blacklist/whitelist says it shouldn't be.
+#
+# default: []
+crates = ["youtubedl_rust"]
+
+#[parse]
+## Whether to parse dependent crates and include their types in the output
+## default: false
+#parse_deps = true
+
+
+[struct]
+# generates operator==
+derive_eq = true
+# generates operator!=
+derive_neq = true
+
+
+[enum]
+# Generates IsFoo() methods.
+derive_helper_methods = true
+# Generates `const T& AsFoo() const` methods.
+derive_const_casts = true
+# Adds an `assert(IsFoo())` on each `AsFoo()` method.
+cast_assert_name = "assert"
+# Generates destructors.
+derive_tagged_enum_destructor = true
+# Generates copy-constructors.
+derive_tagged_enum_copy_constructor = true
+# Generates copy-assignment operators.
+derive_tagged_enum_copy_assignment = true
+# Generates a private default-constructor for enums that doesn't initialize
+# anything. Either you do this or you provide your own default constructor.
+private_default_tagged_enum_constructor = true
